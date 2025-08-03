@@ -19,7 +19,8 @@ const Login = ({ url }) => {
     setData((data) => ({ ...data, [name]: value }));
   };
   const onLogin = async (event) => {
-    event.preventDefault();
+  event.preventDefault();
+  try {
     const response = await axios.post(url + "/api/user/login", data);
     if (response.data.success) {
       if (response.data.role === "admin") {
@@ -28,14 +29,19 @@ const Login = ({ url }) => {
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("admin", true);
         toast.success("Login Successfully");
-        navigate("/add")
-      }else{
+        navigate("/add");
+      } else {
         toast.error("You are not an admin");
       }
     } else {
       toast.error(response.data.message);
     }
-  };
+  } catch (error) {
+    toast.error("Login failed. Please check network or server.");
+    console.error(error);
+  }
+};
+
   useEffect(()=>{
     if(admin && token){
        navigate("/add");
