@@ -1,130 +1,128 @@
-# TOMATO - Food Ordering Website
+# ZestyWay – Food Ordering WebApp
 
-This repository hosts the source code for TOMATO, a dynamic food ordering website built with the MERN Stack. It offers a user-friendly platform for seamless online food ordering.
+A full-stack MERN application designed to deliver a smooth and efficient food ordering experience. ZestyWay includes both User and Admin panels with secure authentication, payment integration, and complete order management.
 
-## Demo
+---
 
-- User Panel: [https://food-delivery-frontend-s2l9.onrender.com/](https://food-delivery-frontend-s2l9.onrender.com/)
-- Admin Panel: [https://food-delivery-admin-wrme.onrender.com/](https://food-delivery-admin-wrme.onrender.com/)
+## ✨ Features
 
-## Features
+### 🧑‍🍳 User Panel
 
-- User Panel
-- Admin Panel
-- JWT Authentication
-- Password Hashing with Bcrypt
-- Stripe Payment Integration
-- Login/Signup
-- Logout
-- Add to Cart
-- Place Order
-- Order Management
-- Products Management
-- Filter Food Products
-- Login/Signup
-- Authenticated APIs
-- REST APIs
-- Role-Based Identification
-- Beautiful Alerts
+- Sign Up / Login / Logout  
+- Browse & Filter Food Items  
+- Add to Cart  
+- Place Orders  
+- Stripe Payment Integration  
+- View Past Orders  
 
-## Screenshots
+### 🔐 Admin Panel
 
-![Hero](https://i.ibb.co/59cwY75/food-hero.png)
-- Hero Section
+- Secure Admin Login  
+- Manage Products (CRUD)  
+- Order Tracking & Management  
+- Role-Based Access Control  
 
-![Products](https://i.ibb.co/JnNQPyQ/food-products.png)
-- Products Section
+### 🛡 Authentication & Security
 
-![Cart](https://i.ibb.co/t2LrQ8p/food-cart.png)
-- Cart Page
+- JWT Authentication  
+- Password Hashing with Bcrypt  
+- Protected Routes & Authenticated APIs  
 
-![Login](https://i.ibb.co/s6PgwkZ/food-login.png)
-- Login Popup
+### 💳 Payments
 
-## Run Locally
+- Stripe Payment Gateway Integration  
 
-Clone the project
+---
 
-```bash
-    git clone https://github.com/Mshandev/Food-Delivery
-```
-Go to the project directory
+## 📸 Screenshots
+
+- Hero Section  
+- Products  
+- Cart  
+- Login  
+
+---
+
+## 🚀 Run Locally
+
+### 1️⃣ Clone the Project
 
 ```bash
-    cd Food-Delivery
+git clone https://github.com/Mshandev/Food-Delivery
+cd Food-Delivery
 ```
-Install dependencies (frontend)
+2️⃣ Install Dependencies
+```bash
+cd frontend
+npm install
+
+cd ../admin
+npm install
+
+cd ../backend
+npm install
+```
+3️⃣ Set Up Environment Variables
+In the backend folder, create a .env file with the following:
 
 ```bash
-    cd frontend
-    npm install
+JWT_SECRET=your_jwt_secret
+SALT=your_salt_value
+MONGO_URL=your_mongo_db_url
+STRIPE_SECRET_KEY=your_stripe_test_key
 ```
-Install dependencies (admin)
+
+4️⃣ Update URLs
+In Admin Panel → App.jsx:
 
 ```bash
-    cd admin
-    npm install
+const url = "your_backend_url";
 ```
-Install dependencies (backend)
+
+In Frontend → StoreContext.js:
 
 ```bash
-    cd backend
-    npm install
+const url = "your_backend_url";
 ```
-Setup Environment Vaiables
 
-```Make .env file in "backend" folder and store environment Variables
-  JWT_SECRET=YOUR_SECRET_TEXT
-  SALT=YOUR_SALT_VALUE
-  MONGO_URL=YOUR_DATABASE_URL
-  STRIPE_SECRET_KEY=YOUR_KEY
- ```
-
-Setup the Frontend and Backend URL
-   - App.jsx in Admin folder
-      const url = YOUR_BACKEND_URL
-     
-  - StoreContext.js in Frontend folder
-      const url = YOUR_BACKEND_URL
-
-  - orderController in Backend folder
-      const frontend_url = YOUR_FRONTEND_URL 
-
-Start the Backend server
+In Backend → orderController.js:
 
 ```bash
-    nodemon server.js
+const frontend_url = "your_frontend_url";
 ```
 
-Start the Frontend server
+5️⃣ Start Development Servers
+Backend:
 
 ```bash
-    npm start
+cd backend
+nodemon server.js
 ```
 
-Start the Backend server
+Frontend:
 
 ```bash
-    npm start
+cd frontend
+npm start
 ```
-## Tech Stack
-* [React](https://reactjs.org/)
-* [Node.js](https://nodejs.org/en)
-* [Express.js](https://expressjs.com/)
-* [Mongodb](https://www.mongodb.com/)
-* [Stripe](https://stripe.com/)
-* [JWT-Authentication](https://jwt.io/introduction)
-* [Multer](https://www.npmjs.com/package/multer)
 
-## Deployment
+Admin:
 
-The application is deployed on Render.
+```bash
+cd admin
+npm start
+```
 
-## Contributing
+🛠 Tech Stack
+Frontend: React, Tailwind CSS
 
-Contributions are always welcome!
-Just raise an issue, and we will discuss it.
+Backend: Node.js, Express.js
 
-## Feedback
+Database: MongoDB
 
-If you have any feedback, please reach out to me [here](https://www.linkedin.com/in/muhammad-shan-full-stack-developer/)
+Authentication: JWT, Bcrypt
+
+Payments: Stripe
+
+
+Made by Maharajan
