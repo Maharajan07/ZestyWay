@@ -14,13 +14,23 @@ const port =process.env.PORT || 4000;
 //middlewares
 app.use(express.json());
 app.use(cors({
-  origin: 'https://zestyway-admin.onrender.com',
+  origin: ['http://localhost:5173', 'https://zestyway-admin.onrender.com'],
+  
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
 
 
 // DB connection
 connectDB();
+
+
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "https://zestyway-admin.onrender.com");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+  res.header("Access-Control-Allow-Credentials", "true");
+  next();
+});
 
 // api endpoints
 app.use("/api/food", foodRouter);
