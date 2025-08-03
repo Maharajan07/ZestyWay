@@ -34,15 +34,6 @@ A full-stack MERN application designed to deliver a smooth and efficient food or
 
 ---
 
-## 📸 Screenshots
-
-- Hero Section  
-- Products  
-- Cart  
-- Login  
-
----
-
 ## 🚀 Run Locally
 
 ### 1️⃣ Clone the Project
@@ -51,7 +42,7 @@ A full-stack MERN application designed to deliver a smooth and efficient food or
 git clone https://github.com/Mshandev/Food-Delivery
 cd Food-Delivery
 ```
-2️⃣ Install Dependencies
+### 2️⃣ Install Dependencies
 ```bash
 cd frontend
 npm install
@@ -62,7 +53,7 @@ npm install
 cd ../backend
 npm install
 ```
-3️⃣ Set Up Environment Variables
+### 3️⃣ Set Up Environment Variables
 In the backend folder, create a .env file with the following:
 
 ```bash
@@ -72,7 +63,7 @@ MONGO_URL=your_mongo_db_url
 STRIPE_SECRET_KEY=your_stripe_test_key
 ```
 
-4️⃣ Update URLs
+### 4️⃣ Update URLs
 In Admin Panel → App.jsx:
 
 ```bash
@@ -91,7 +82,7 @@ In Backend → orderController.js:
 const frontend_url = "your_frontend_url";
 ```
 
-5️⃣ Start Development Servers
+### 5️⃣ Start Development Servers
 Backend:
 
 ```bash
@@ -113,7 +104,7 @@ cd admin
 npm start
 ```
 
-🛠 Tech Stack
+## 🛠 Tech Stack
 Frontend: React, Tailwind CSS
 
 Backend: Node.js, Express.js
@@ -124,5 +115,6 @@ Authentication: JWT, Bcrypt
 
 Payments: Stripe
 
+---
 
-#### Made by Maharajan
+Made by Maharajan
