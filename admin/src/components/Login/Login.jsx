@@ -6,6 +6,7 @@ import axios from "axios";
 import { StoreContext } from "../../context/StoreContext";
 import {useNavigate } from "react-router-dom";
 
+const API_URL = import.meta.env.VITE_BACKEND_URL;
 
 
 const Login = () => {
