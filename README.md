@@ -2,6 +2,8 @@
 
 A full-stack MERN application designed to deliver a smooth and efficient food ordering experience. ZestyWay includes both User and Admin panels with secure authentication, payment integration, and complete order management.
 
+🔗 **Live Demo:** [Visit Site](https://zestyway-1.onrender.com)
+
 ---
 
 ## ✨ Features
