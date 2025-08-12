@@ -42,7 +42,7 @@ A full-stack MERN application designed to deliver a smooth and efficient food or
 
 ```bash
 git clone https://github.com/Maharajan07/ZestyWay
-cd Food-Delivery
+cd ZestyWay-main
 ```
 ### 2️⃣ Install Dependencies
 ```bash
