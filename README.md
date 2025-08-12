@@ -41,7 +41,7 @@ A full-stack MERN application designed to deliver a smooth and efficient food or
 ### 1️⃣ Clone the Project
 
 ```bash
-git clone https://github.com/Mshandev/Food-Delivery
+git clone https://github.com/Maharajan07/ZestyWay
 cd Food-Delivery
 ```
 ### 2️⃣ Install Dependencies
