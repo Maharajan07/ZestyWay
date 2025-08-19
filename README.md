@@ -119,4 +119,4 @@ Payments: Stripe
 
 ---
 
-#### Made by Maharajan
+#### Made by Maharajan!
